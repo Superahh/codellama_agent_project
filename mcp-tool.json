@@ -1,0 +1,34 @@
+{
+  "name": "Ollama Coding Assistant",
+  "description": "Provides code completion and chat using a local Ollama model.",
+  "tools": [
+    {
+      "name": "completion",
+      "description": "Generates code completions based on a given prompt.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "prompt": {
+            "type": "string",
+            "description": "Code or text input to complete."
+          }
+        },
+        "required": ["prompt"]
+      }
+    },
+    {
+      "name": "chat",
+      "description": "Answers questions and provides coding help.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string",
+            "description": "A question or message for the assistant."
+          }
+        },
+        "required": ["message"]
+      }
+    }
+  ]
+}
